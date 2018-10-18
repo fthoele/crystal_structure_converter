@@ -11,6 +11,14 @@ Among the supported formats:
 - xyz
 """
 
+def check_ase_is_installed():
+    try:
+        import ase.io
+    except ModuleNotFoundError:
+        print("Error importing ASE. You can install it by running the following command:")
+        print("$ pip install ase")
+        exit()
+
 if __name__ == "__main__":
     #sys.argv = ["convert_struct.py", 
     #    "-f", 
@@ -19,6 +27,7 @@ if __name__ == "__main__":
     #    "xsf", 
     #    "-i", 
     #    "/Users/thoelef/Projects/ase-converter/chg.in"]
+    check_ase_is_installed()
 
     import argparse
     parser = argparse.ArgumentParser(description=description, 
