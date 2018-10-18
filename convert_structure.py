@@ -19,14 +19,7 @@ def check_ase_is_installed():
         print("$ pip install ase")
         exit()
 
-if __name__ == "__main__":
-    #sys.argv = ["convert_struct.py", 
-    #    "-f", 
-    #    "espresso-in", 
-    #    "-t", 
-    #    "xsf", 
-    #    "-i", 
-    #    "/Users/thoelef/Projects/ase-converter/chg.in"]
+if __name__ == "__main__":    
     check_ase_is_installed()
 
     import argparse
