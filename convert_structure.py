@@ -1,6 +1,4 @@
-import sys
-
-description = """Convert between crystal structure formats using ASE.
+"""Convert between crystal structure formats using ASE.
 For a list of supported formats, see 
 https://wiki.fysik.dtu.dk/ase/ase/io/io.html.
 
@@ -10,6 +8,8 @@ Among the supported formats:
 - cif
 - xyz
 """
+
+import sys
 
 def check_ase_is_installed():
     try:
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     check_ase_is_installed()
 
     import argparse
-    parser = argparse.ArgumentParser(description=description, 
+    parser = argparse.ArgumentParser(description=__doc__, 
         formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('-i', '--in', help='Filename of input', required=True, dest="input")
     parser.add_argument('-o', '--out', help='Filename to write the output to. If not given, print to stdout')
