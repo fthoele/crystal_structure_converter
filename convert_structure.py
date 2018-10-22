@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Convert between crystal structure formats using ASE.
 For a list of supported formats, see 
 https://wiki.fysik.dtu.dk/ase/ase/io/io.html.
